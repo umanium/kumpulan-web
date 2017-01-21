@@ -26,11 +26,12 @@ class ProjectTests(unittest.TestCase):
     # Tests
     def test_main_page(self):
         response = self.app.get('/', follow_redirects=True)
+        print('Testing the main page')
         self.assertIn(b'Welcome to the Kumpulan!', response.data)
         self.assertIn(b'Search your hang-out places with your communities here!', response.data)
         self.assertIn(b'Search Community', response.data)
         self.assertIn(b'Search Place', response.data)
         self.assertIn(b'Places Near You', response.data)
-        
+
 if __name__ == "__main__":
     unittest.main()
