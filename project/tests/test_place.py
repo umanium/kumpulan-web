@@ -25,7 +25,7 @@ class ProjectTests(unittest.TestCase):
 
     # Tests
     def test_main_page(self):
-        response = self.app.get('/place', follow_redirects=True)
+        response = self.app.get('/places/', follow_redirects=True)
         print('\nTesting the place page')
         self.assertIn(b'Welcome to the Kumpulan!', response.data)
         self.assertIn(b'Search your hang-out places with your communities here!', response.data)

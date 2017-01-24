@@ -4,7 +4,7 @@
 from flask import Blueprint, render_template
 
 # config
-user_blueprint = Blueprint("user", __name__, template_folder="templates/user")
+user_blueprint = Blueprint("user", __name__, template_folder="templates/user", url_prefix="/users")
 
 # routes
 @user_blueprint.route('/login')

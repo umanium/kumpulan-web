@@ -25,7 +25,7 @@ class ProjectTests(unittest.TestCase):
 
     # Tests
     def test_login_page(self):
-        response = self.app.get('/login', follow_redirects=True)
+        response = self.app.get('/users/login', follow_redirects=True)
         print('\nTesting the user page')
         self.assertIn(b'There will be something here', response.data)
 
