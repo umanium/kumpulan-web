@@ -25,7 +25,24 @@
 
 
     <h2>Places Near You</h2>
-
+    <table>
+      <thead>
+        <tr>
+          <th>Place Name</th>
+          <th>Description</th>
+          <th>Coordinate</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for place in all_places %}
+        <tr>
+          <td>{{ place.name }}</td>
+          <td>{{ place.description }}</td>
+          <td>{{ place.latitude }}, {{ place.longitude }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
 
   </body>
 </html>
